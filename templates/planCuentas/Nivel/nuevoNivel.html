@@ -1,0 +1,15 @@
+{% extends 'formularionivel.html' %}
+{% load static %}
+
+{% block controls %}
+<div class="card-body row g-3">
+                {% csrf_token %}
+                <input type="hidden" name="action" value="{{ action }}">
+                    <div class="col-5">
+                        <label for="inputState" class="form-label">Descripcion</label>
+                        <input type="text" class="form-control"  placeholder="Ingrese Nivel">
+                    </div>
+
+
+                    </div>
+{% endblock %}

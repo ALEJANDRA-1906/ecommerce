@@ -1,0 +1,44 @@
+{% extends 'consulta_activosfijos.html' %}
+{% load static %}
+{% block columns %}
+    <tr>
+        <th scope="col" style="width: 5%;">Id</th>
+        <th scope="col" style="width: 15%;">Fecha de Adquisicion</th>
+        <th scope="col" style="width: 10%;">Categoria</th>
+        <th scope="col" style="width: 10%;">Detalle</th>
+        <th scope="col" style="width: 15%;">Marca</th>
+        <th scope="col" style="width: 10%;">Modelo</th>
+        <th scope="col" style="width: 15%;">Fecha de Inicio/uso</th>
+        <th scope="col" style="width: 15%;">Ubicacion</th>
+        <th scope="col" style="width: 10%;">Depreciacion</th>
+        <th scope="col" style="width: 10%;">Opciones</th>
+    </tr>
+{% endblock %}
+
+{% block rows %}
+  <tr>
+      <td>1</td>
+      <td>01.04.2008</td>
+      <td>Equipo de Comp. </td>
+      <td>Computadora de Escritorio</td>
+      <td>XYZ</td>
+      <td>PV 08</td>
+      <td>01.04.2008</td>
+      <td>Área de producción </td>
+      <td> 1,187.00</td>
+      <td class="acciones">
+        <a href="{{ crearA_url }}">✏️</a>
+        <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">❌</a>
+          <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body" style="padding-top:10%; padding-bottom:5%;">
+                            <h4 class="modal-title text-center">¡Elemento eliminado con <strong>exito!</strong></h4>
+                            <a href="{{ listarA_url }}" style="margin-left:10%; margin-top:10%"  type="submit" class="btn btn-danger col-12 mx-auto pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span>Aceptar</a>
+                        </div>
+                    </div>
+                </div>
+          </div>
+      </td>
+
+{% endblock %}

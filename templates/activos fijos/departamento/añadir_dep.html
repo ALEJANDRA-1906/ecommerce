@@ -1,0 +1,19 @@
+{% extends 'formulario_dep.html' %}
+{% load static %}
+
+{% block controls %}
+            <div class="card-body row g-3">
+                <input type="hidden" name="action" value="{{ action }}">
+
+
+
+                    <div class="col-6">
+                        <label for="inputState" class="form-label">Departamento</label>
+                        <input type="text" class="form-control"  placeholder="ingrese Nuevo Departamento">
+                    </div>
+
+
+
+            </div>
+
+{% endblock %}

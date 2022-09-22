@@ -1,0 +1,31 @@
+{% extends 'consulta_dep.html' %}
+{% load static %}
+{% block columns %}
+    <tr>
+        <th scope="col" style="width: 5%;">Id</th>
+        <th scope="col" style="width: 15%;">Departamento</th>
+        <th scope="col" style="width: 15%;">Opciones</th>
+
+    </tr>
+{% endblock %}
+
+{% block rows %}
+  <tr>
+      <td>1</td>
+      <td>Área de producción </td>
+      <td class="acciones">
+        <a href="{{ crearD_url }}">✏️</a>
+        <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">❌</a>
+          <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body" style="padding-top:10%; padding-bottom:5%;">
+                            <h4 class="modal-title text-center">¡Elemento eliminado con <strong>exito!</strong></h4>
+                            <a href="{{ listarD_url }}" style="margin-left:10%; margin-top:10%"  type="submit" class="btn btn-danger col-12 mx-auto pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span>Aceptar</a>
+                        </div>
+                    </div>
+                </div>
+          </div>
+      </td>
+
+{% endblock %}

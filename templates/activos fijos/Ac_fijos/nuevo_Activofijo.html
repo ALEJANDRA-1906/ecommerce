@@ -1,0 +1,43 @@
+{% extends 'formulario_Acfijos.html' %}
+{% load static %}
+
+{% block controls %}
+            <div class="card-body row g-3">
+                <input type="hidden" name="action" value="{{ action }}">
+                    <div class="col-md-4">
+                       <label for="inputState" class="form-label">Fecha de Addquisicion</label>
+                       <input type="text" class="form-control"  >
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="inputState" class="form-label">Detalle</label>
+                        <select  class="form-select">
+                            <option selected>Escoja tipo de Articulo</option>
+                            <option>Escritorios</option>
+                            <option>Equipo de comp.</option>
+                            <option>Vehiculo</option>
+                            <option>sillas</option>
+
+                        </select>
+                    </div>
+
+                    <div class="col-6">
+                        <label for="inputState" class="form-label">Marca</label>
+                        <input type="text" class="form-control"  placeholder="ingrese Marca">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputState" class="form-label">Modelo</label>
+                        <input type="text" class="form-control"  placeholder="ingrese Modelo">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputState" class="form-label">Fecha de Inicio/uso</label>
+                        <input type="text" class="form-control"  placeholder="">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="inputState" class="form-label">Depreciacion</label>
+                        <input type="text" class="form-control"  placeholder="">
+                    </div>
+            </div>
+
+{% endblock %}

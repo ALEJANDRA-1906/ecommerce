@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+      <div class="container-fluid">
+       <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-2">
+          <div class="col">
+            <div class="card" style="height:15rem">
+              <img src="{% static 'img/cardCuentas/extracto-bancario.png' %}" class="img-fluid  mx-auto d-block" style="width:40%">
+              <div class="card-body text-center">
+                  <a class="text-decoration-none" href="{% url 'tipocuenta' %}">
+                    <h5 class="card-title text-success">Tipo de Cuenta</h5>
+                  </a>
+                <p class="card-text">Se desglosan los tipos de cuentas contables</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="height:15rem" >
+              <img src="{% static 'img/cardCuentas/contabilidad.png' %}" class="img-fluid  mx-auto d-block" style="width:40%">
+               <div class="card-body text-center">
+                   <a class="text-decoration-none" href="{% url 'cuentas' %}">
+                       <h5 class="card-title text-success">Cuentas</h5>
+                   </a>
+                <p class="card-text">Las cuentas contables y su descripcion</p>
+              </div>
+            </div>
+          </div>
+           <div class="col">
+            <div class="card" style="height:15rem" >
+              <img src="{% static 'img/cardCuentas/barra-grafica.png' %}" class="img-fluid  mx-auto d-block" style="width:40%">
+               <div class="card-body text-center">
+                   <a class="text-decoration-none" href="{% url 'niveles' %}">
+                       <h5 class="card-title text-success">Nivel</h5>
+                   </a>
+                <p class="card-text">Nivel de desglosamiento de las cuentas</p>
+              </div>
+            </div>
+            </div>
+
+
+
+       </div>
+      </div>
+{% endblock %}

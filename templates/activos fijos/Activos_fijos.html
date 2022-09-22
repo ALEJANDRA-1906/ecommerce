@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+      <div class="container-fluid">
+       <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-2">
+          <div class="col">
+            <div class="card" style="height:15rem">
+              <img src="{% static 'img/cardCuentas/extracto-bancario.png' %}" class="img-fluid  mx-auto d-block" style="width:40%">
+              <div class="card-body text-center">
+                  <a class="text-decoration-none" href="{% url 'departamentos' %}" >
+                    <h5 class="card-title text-success">Departamentos</h5>
+                  </a>
+                <p class="card-text">son cada una de las partes en las que están divididas las actividades que realiza</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="height:15rem" >
+              <img src="{% static 'img/cardCuentas/contabilidad.png' %}" class="img-fluid  mx-auto d-block" style="width:40%">
+               <div class="card-body text-center">
+                   <a class="text-decoration-none" href="{% url 'listadeactivosf' %}" >
+                       <h5 class="card-title text-success">Activos Fijos</h5>
+                   </a>
+                <p class="card-text">Un bien de una empresa, ya sea tangible o intangible</p>
+              </div>
+            </div>
+          </div>
+           <div class="col">
+            <div class="card" style="height:15rem" >
+              <img src="{% static 'img/cardCuentas/barra-grafica.png' %}" class="img-fluid  mx-auto d-block" style="width:40%">
+               <div class="card-body text-center">
+                   <a class="text-decoration-none" href="{% url 'tipcategoria' %}" >
+                       <h5 class="card-title text-success">Categorias</h5>
+                   </a>
+                <p class="card-text">tipos de activos</p>
+              </div>
+            </div>
+            </div>
+
+
+
+       </div>
+      </div>
+{% endblock %}
